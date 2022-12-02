@@ -117,7 +117,7 @@ def ingredientes_pizzas(pizzas): # Creo la función que guarda en un dataframe q
         matriz.append(tipo)
     matriz = np.array(matriz)
     # Creo el dataframe en el que las filas son los tipos de pizza (distinguiendo por tamaño) y las columnas son cada uno de los ingredientes
-    ingre_pizzas = pd.DataFrame(data = matriz, index = tipos_pizza, columns = ingredientes)
+    ingre_pizzas = pd.DataFrame(data = matriz, index = tipos_pizza, columns = [ingrediente for ingrediente in ingredientes)
     return ingre_pizzas
 
 def ingredientes_semana(order_details, ingre_pizzas): # Creo la función que me calcula la cantidad de cada ingrediente por semana
